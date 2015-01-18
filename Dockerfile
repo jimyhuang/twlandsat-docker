@@ -4,11 +4,11 @@ RUN echo "deb http://mirrors.linode.com/debian/ testing main contrib non-free  "
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get -y install git wget dans-gdal-scripts imagemagick
+RUN apt-get -y install git wget dans-gdal-scripts imagemagick make gcc
 RUN apt-get -y install libfltk1.1 cmake gdal-bin libgdal-dev geotiff-bin  libgeotiff-dev
 RUN cd /usr/local/
 RUN wget http://goo.gl/nM7dxT -O OTB-3.20.0.tgz
-RUN tar -zxvf OTB-3.20.0.tgz
+RUN tar -zxf OTB-3.20.0.tgz
 RUN mkdir otb
 RUN cd otb
 RUN cmake ../OTB-3.20.0
