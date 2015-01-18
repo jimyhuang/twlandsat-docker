@@ -5,5 +5,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 RUN apt-get -y install git
-RUN git clone https://github.com/jimyhuang/twlandsat.git
-RUN chmod 755 twlandsat/install.sh
+RUN cd /home
+RUN git clone https://github.com/jimyhuang/twlandsat.git twlandsat
+RUN chmod 755 ./twlandsat/install.sh
+RUN /home/twlandsat/install.sh
