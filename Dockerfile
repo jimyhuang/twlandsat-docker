@@ -8,3 +8,8 @@ RUN pip install -U git+git://github.com/developmentseed/landsat-util.git
 
 # clean
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+WORKDIR /home
+RUN git clone https://github.com/jimyhuang/twlandsat.git twlandsat
+
+# defafult
+CMD cd /home/twlandsat && ./start.sh
