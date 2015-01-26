@@ -12,4 +12,5 @@ WORKDIR /home
 RUN git clone https://github.com/jimyhuang/twlandsat.git twlandsat
 
 # defafult
-CMD cd /home/twlandsat && ./start.sh
+WORKDIR /home/twlandsat
+CMD git pull && ./start.sh
