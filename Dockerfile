@@ -1,4 +1,3 @@
-# DOCKER-VERSION 1.2.0
 # TO jimyhuang/twlandsat
 FROM jimyhuang/twlandsat-util
 RUN \
