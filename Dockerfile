@@ -8,4 +8,5 @@ RUN \
 
 # defafult
 WORKDIR /home/twlandsat
+
 ENTRYPOINT ["/home/twlandsat/start.sh"]
