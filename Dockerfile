@@ -8,5 +8,7 @@ RUN \
 
 # defafult
 WORKDIR /home/twlandsat
+ENV MAGICK_MEMORY_LIMIT=256
+ENV MAGICK_MAP_LIMIT=256
 
 ENTRYPOINT ["/home/twlandsat/start.sh"]
